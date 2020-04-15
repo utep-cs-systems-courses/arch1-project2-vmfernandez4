@@ -17,6 +17,10 @@ button.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o switches.o main.o buz
 load: button.elf
 	msp430loader.sh "prog button.elf
 
+cleanreset: button.elf
+	rm -f *.o *.elf
+	msp430loader.sh "erase"	
+
 clean:
 	rm -f *.o *.elf
 
