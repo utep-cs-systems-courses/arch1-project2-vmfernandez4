@@ -15,7 +15,7 @@ button.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o switches.o main.o buz
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load: button.elf
-	msp430loader.sh button.elf
+	msp430loader.sh "prog button.elf
 
 clean:
 	rm -f *.o *.elf
